@@ -21,13 +21,15 @@ class Result {
 
     public static int alternatingCharacters(String s) {
     // Write your code here
-    if (s.length() <= 1) {
+    if (s.length() <= 1) { //Base Case
         return 0;
-    } else {
+    } else { //Recursive cases
+        //If the current character is equal to the next one then you recurse by deleting the first letter of the string.
         if (s.charAt(0) == s.charAt(1)) {
             return 1 + alternatingCharacters(s.substring(1));
         } 
-        else 
+        else
+        //Otherwise recurse and delete the first letter of the string input.
         {
             return alternatingCharacters(s.substring(1));
         }
